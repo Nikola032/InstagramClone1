@@ -7,32 +7,30 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class TabAdapter extends FragmentPagerAdapter {
-    public TabAdapter(@NonNull FragmentManager fm) { super(fm);
+    public TabAdapter(@NonNull FragmentManager fm) {
+        super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
     }
 
     @NonNull
     @Override
     public Fragment getItem(int tabPosition) {
-        switch (tabPosition) {
+
+        switch (tabPosition){
             case 0:
-                ProfileTab profileTab = new ProfileTab();
-                return  profileTab;
+                return new ProfileTab();
             case 1:
-                return  new UsersTab();
+                return new UsersTab();
             case 2:
                 return new SharePictureTab();
-            default :
+            default:
                 return null;
         }
-
-
     }
 
     @Override
     public int getCount() {
         return 3;
     }
-
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
@@ -43,8 +41,8 @@ public class TabAdapter extends FragmentPagerAdapter {
                 return "Users";
             case 2:
                 return "Share Picture";
-            default :
+            default:
                 return null;
-        }
-    }
-}
+                }
+                }
+                }

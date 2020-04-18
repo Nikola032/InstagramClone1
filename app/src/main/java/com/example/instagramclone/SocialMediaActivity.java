@@ -8,7 +8,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 public class SocialMediaActivity extends AppCompatActivity {
-    private androidx.appcompat.widget.Toolbar toolbar;
+     private androidx.appcompat.widget.Toolbar toolbar;
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private TabAdapter tabAdapter;
